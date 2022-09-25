@@ -16,21 +16,31 @@
   <meta name="author" content="Hqh">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Archives">
-<meta property="og:url" content="http://example.com/archives/2022/08/index.html">
+    <meta name="description" content="ls:查看当前目录下的文件 （list缩写） .    ：当前文件 ..   :上一目录 pwd:列出当前工作路径 cd:进入某个文件 rm:删除文件 touch:建立一个空的文件 sudo:在使用某些指令需要root权限时就用sudo 提升权限 man:找到对应手册说明 reboot:重启 poweroff:关机 uname -a: -a可以显示所有信息 &#x2F;  ：指的是根目录 cd ~ :进入h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你知道什么是内核嘛">
+<meta property="og:url" content="http://example.com/2022/09/22/%E4%BD%A0%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E6%A0%B8%E5%98%9B/index.html">
 <meta property="og:site_name" content="Secret Garden">
+<meta property="og:description" content="ls:查看当前目录下的文件 （list缩写） .    ：当前文件 ..   :上一目录 pwd:列出当前工作路径 cd:进入某个文件 rm:删除文件 touch:建立一个空的文件 sudo:在使用某些指令需要root权限时就用sudo 提升权限 man:找到对应手册说明 reboot:重启 poweroff:关机 uname -a: -a可以显示所有信息 &#x2F;  ：指的是根目录 cd ~ :进入h">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-22T07:26:50.000Z">
+<meta property="article:modified_time" content="2022-09-25T02:10:33.652Z">
 <meta property="article:author" content="Hqh">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Archives - Secret Garden</title>
+  <title>你知道什么是内核嘛 - Secret Garden</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -80,7 +90,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -185,9 +195,49 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Archives"></span>
+            <span id="subtitle" data-typed-text="你知道什么是内核嘛"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-22 15:26" pubdate>
+          September 22, 2022 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          642 words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -203,58 +253,186 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">9 posts in total</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2022</p>
-    
-    <a href="/2022/08/20/%E4%B8%80%E4%BA%9B%E4%BA%9B%E6%83%B3%E5%BF%B5/" class="list-group-item list-group-item-action">
-      <time>08-20</time>
-      <div class="list-group-item-title">一些些想念</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">你知道什么是内核嘛</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>ls:查看当前目录下的文件 （list缩写）</p>
+<p>.    ：当前文件</p>
+<p>..   :上一目录</p>
+<p>pwd:列出当前工作路径</p>
+<p>cd:进入某个文件</p>
+<p>rm:删除文件</p>
+<p>touch:建立一个空的文件</p>
+<p>sudo:在使用某些指令需要root权限时就用sudo 提升权限</p>
+<p>man:找到对应手册说明</p>
+<p>reboot:重启</p>
+<p>poweroff:关机</p>
+<p>uname -a: -a可以显示所有信息</p>
+<p>/  ：指的是根目录</p>
+<p>cd ~ :进入home 目录</p>
+<p>cat ：一次显示整个文件 瞄一下</p>
+<p>nano:修改</p>
+<p>下载插件：sudo apt install &lt;名字&gt;</p>
+<p>摁一次快照，可以记录当前的硬盘状态。之后玩坏了可以回到这个状态</p>
+<p>make -j8：以8个内核去执行make</p>
+<p>如果你有很多指令要做，每次打一堆就很麻烦。</p>
+<p>可以建一个makefile</p>
+<p>里面列很多目标以及其操作</p>
+<p>这样我们执行make一个目标的时候，就可以完成想要的动作</p>
+<p>如果指令是要生成一个文件</p>
+<p>目标名最好是想要生成的文件名</p>
+<p>它会默认执行第一个目标，显示第一个目标的命令和结果</p>
+
+
+<p>hello:</p>
+<p>​            @echo”hello”          #输出hello,前面加了@，所以这个指令不会输出，只会输出hello</p>
+<p>action:    a.c     #加一个前提设置，如果a.c已经存在没被改动，那目标action就不会执行再生成相同的文件 </p>
+<p>​                gcc a.c -o action    #用gcc编译a.c， -o后面指定生成文件的名字</p>
+<p>.PHONY：clean   #phony后面这个是假的虚设的目标名clean,因为如果makefile之外有一个文件名叫clean的话，就不会执行这个目标</p>
+<p>clean：</p>
+<p>​            rm action</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
   
-    
-    <a href="/2022/08/15/%E5%BD%93%E6%88%91%E5%9D%9A%E6%8C%81%E4%B8%A4%E5%A4%A9%E9%83%BD%E5%9C%A8%E4%B8%A4%E7%82%B9%E5%89%8D%E7%9D%A1%E8%A7%89%E5%90%8E/" class="list-group-item list-group-item-action">
-      <time>08-15</time>
-      <div class="list-group-item-title">当我坚持两天都在两点前睡觉后</div>
-    </a>
   
-    
-    <a href="/2022/08/09/%E6%84%9F%E8%A7%89%E6%9C%80%E8%BF%91%E7%8A%B6%E6%80%81%E4%B8%8D%E6%98%AF%E5%BE%88%E5%81%A5%E5%BA%B7/" class="list-group-item list-group-item-action">
-      <time>08-09</time>
-      <div class="list-group-item-title">感觉最近状态不是很健康</div>
-    </a>
+</div>
+
+
+              
   
-    
-    <a href="/2022/08/06/%E7%A6%BB%E5%BC%80%E5%AD%A6%E8%BF%98%E5%89%A918%E5%A4%A9/" class="list-group-item list-group-item-action">
-      <time>08-06</time>
-      <div class="list-group-item-title">离开学还剩18天</div>
-    </a>
-  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>你知道什么是内核嘛</div>
+      <div>http://example.com/2022/09/22/你知道什么是内核嘛/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Hqh</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>September 22, 2022</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/19/%E5%A5%BD%E7%83%A6%E5%95%8A/" title="好烦啊">
+                        <span class="hidden-mobile">好烦啊</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -348,6 +526,72 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
